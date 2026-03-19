@@ -5,3 +5,5 @@
 - test_feedback_integration.py: altered to work with Anthropic API key. import dotenv, etc.
 
 - test_schema.py: specified utf-8 encoding (windows issue) return json.loads((EXAMPLES_DIR / "sample_inputs.json").read_text(encoding='utf-8'))
+
+- test_feedback_unit.py: edited to fit anthropic API use. 
