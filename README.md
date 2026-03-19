@@ -7,3 +7,6 @@
 - test_schema.py: specified utf-8 encoding (windows issue) return json.loads((EXAMPLES_DIR / "sample_inputs.json").read_text(encoding='utf-8'))
 
 - test_feedback_unit.py: edited to fit anthropic API use. 
+
+
+While making tests, i realized the fundamental issue of this project is getting the model to pick up on what the user is intending to say: As errors increase, it becomes harder for the LLM to identify and correct what the user was intending to say.
