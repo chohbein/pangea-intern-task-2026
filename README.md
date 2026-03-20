@@ -10,3 +10,4 @@
 
 
 While making tests, i realized the fundamental issue of this project is getting the model to pick up on what the user is intending to say: As errors increase, it becomes harder for the LLM to identify and correct what the user was intending to say.
+  - This is hard to address in test cases. Try adding new rule to best address the ambiguous intended meaning in high error density sentences.
