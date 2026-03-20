@@ -19,3 +19,7 @@ While making tests, i realized the fundamental issue of this project is getting 
    
   - Case where the model would flag the entire sentence as the error. Added rule #8 to address this; flag the smallest possible span of errors in the sentence and, if possible, do not flag the entire sentence.
 
+## tests
+1. 
+2. Focus on grammatical complexity, not length.
+3. ''
