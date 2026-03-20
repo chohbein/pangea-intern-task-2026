@@ -11,5 +11,11 @@
 
 While making tests, i realized the fundamental issue of this project is getting the model to pick up on what the user is intending to say: As errors increase, it becomes harder for the LLM to identify and correct what the user was intending to say.
   - This is hard to address in test cases. Try adding new rule to best address the ambiguous intended meaning in high error density sentences.
-  - I considered adding a rule to the prompt such that it must use the provided target language to translate the input; this would potentially help in this rare case of users inputting linguistically-ambiguous erroneous sentences.
+  - I considered adding a rule to the prompt such that it must use the provided target language to translate the input; this would potentially help in this rare case of users inputting linguistically-ambiguous erroneous sentences. (model ignores 'target' language and just infers language through the user's sentence. decided against)
     - I decided against this; the case is more rare than the case where the user just accidently puts the wrong target language. Tradeoff.
+  - Added #7 to rules in prompt. This will
+    1. Help ensure the most reasonable assumption as to what the user meant in error-ridden sentences
+    2. Note in the explanation what the model assumed the user meant by their input, helping the user.
+   
+  - Case where the model would flag the entire sentence as the error. Added rule #8 to address this; flag the smallest possible span of errors in the sentence and, if possible, do not flag the entire sentence.
+
